@@ -27,5 +27,5 @@ API завершён через SIGKILL после подтверждённог�
 
 Подробности: [verification.json](verification.json),
 [smoke](smoke-verification.json), [recovery](recovery-verification.json).
-GitHub Actions подготовлен; репозиторий пока локальный. Нагрузочное испытание
+GitHub Actions повторяет проверки; [актуальный статус](https://github.com/dasferwer/reco-trail/actions). Нагрузочное испытание
 и потеря диска PostgreSQL не проводились.

@@ -1,5 +1,7 @@
 # RecoTrail
 
+[![CI](https://github.com/dasferwer/reco-trail/actions/workflows/ci.yml/badge.svg)](https://github.com/dasferwer/reco-trail/actions)
+
 Сервис рекомендаций фильмов с историей действий и воспроизводимой оценкой качества.
 Новый пользователь получает популярные фильмы или подборку по выбранным жанрам.
 После обратной связи выдача учитывает его историю. Повторный запрос не создаёт

@@ -43,7 +43,7 @@
     "ndcg_at_10": 0.16482420034714024
   },
   "github": {
-    "published": false,
-    "workflow": "prepared; equivalent checks run locally"
+    "repository_url": "https://github.com/dasferwer/reco-trail",
+    "actions_url": "https://github.com/dasferwer/reco-trail/actions"
   }
 }
