@@ -1,0 +1,49 @@
+{
+  "verified_at": "2026-09-11T13:45:34.116404+00:00",
+  "project": "recotrail",
+  "tests": {
+    "passed": 24,
+    "result": "24 passed in 5.62s",
+    "infrastructure": "Isolated PostgreSQL 17"
+  },
+  "live_smoke": {
+    "ok": true,
+    "cold_start": "popularity",
+    "preferences": "genre_preferences",
+    "after_feedback": "hybrid",
+    "model_version": "movielens-v1",
+    "idempotent_retry": true,
+    "late_event_ignored": true,
+    "catalog_cache_invalidation": true
+  },
+  "recovery": {
+    "ok": true,
+    "fault": "SIGKILL api after acknowledged event",
+    "events_after_retry": 1,
+    "stable_recommendations": true,
+    "profile_version": 2,
+    "model_version": "movielens-v1"
+  },
+  "checks": {
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "uv_lock": "passed",
+    "docker_compose": "passed",
+    "seed_twice": "passed",
+    "runtime_without_test_dependencies": "passed",
+    "openapi_snapshot_matches_live": "passed",
+    "immutable_model_registration": "passed"
+  },
+  "model": {
+    "version": "movielens-v1",
+    "default_algorithm": "hybrid",
+    "test_warm_users": 25,
+    "test_cold_users": 47,
+    "recall_at_10": 0.055248572703468495,
+    "ndcg_at_10": 0.16482420034714024
+  },
+  "github": {
+    "published": false,
+    "workflow": "prepared; equivalent checks run locally"
+  }
+}

@@ -1,0 +1,4 @@
+data/*.csv -text whitespace=-blank-at-eol,-blank-at-eof
+# В исходной лицензии заголовок подчёркнут семью знаками =; это не конфликт слияния.
+data/README.txt -text conflict-marker-size=32
+models/DATA-LICENSE.txt -text conflict-marker-size=32

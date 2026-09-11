@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "cold_start": "popularity",
+  "preferences": "genre_preferences",
+  "after_feedback": "hybrid",
+  "model_version": "movielens-v1",
+  "idempotent_retry": true,
+  "late_event_ignored": true,
+  "catalog_cache_invalidation": true
+}

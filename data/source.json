@@ -1,0 +1,11 @@
+{
+  "name": "MovieLens latest-small",
+  "url": "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip",
+  "downloaded_on": "2026-09-11",
+  "archive_sha256": "696d65a3dfceac7c45750ad32df2c259311949efec81f0f144fdfb91ebc9e436",
+  "files_sha256": {
+    "ratings.csv": "aa289ca83157595d0df6aea1be6a4ded676ddc4385472e8313a8ed9805352646",
+    "movies.csv": "5a5f32dd9bb3797b8e728a1b98958789d2b13f294a69fdfbc5727f8a9611aa07",
+    "README.txt": "63d22ac138e80fae37021797ed8e1b9424b5239dc576a137422adf783ae3f404"
+  }
+}

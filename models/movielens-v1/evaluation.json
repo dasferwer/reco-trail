@@ -1,0 +1,221 @@
+{
+  "version": "movielens-v1",
+  "created_at": "2026-09-11T07:34:38.183715+00:00",
+  "dataset": {
+    "name": "MovieLens latest-small",
+    "url": "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip",
+    "downloaded_on": "2026-09-11",
+    "archive_sha256": "696d65a3dfceac7c45750ad32df2c259311949efec81f0f144fdfb91ebc9e436",
+    "files_sha256": {
+      "ratings.csv": "aa289ca83157595d0df6aea1be6a4ded676ddc4385472e8313a8ed9805352646",
+      "movies.csv": "5a5f32dd9bb3797b8e728a1b98958789d2b13f294a69fdfbc5727f8a9611aa07",
+      "README.txt": "63d22ac138e80fae37021797ed8e1b9424b5239dc576a137422adf783ae3f404"
+    }
+  },
+  "split_rows": {
+    "train": 80668,
+    "validation": 10084,
+    "test": 10084
+  },
+  "cutoffs": {
+    "validation_start": 1458635171,
+    "test_start": 1498029450
+  },
+  "selected_alpha": 0.75,
+  "selected_algorithm": "hybrid",
+  "validation_algorithms": {
+    "popularity": {
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.043517135851630626,
+      "ndcg_at_10": 0.03739543983702882,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.007753908732680818,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "content": {
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.006832738411685781,
+      "ndcg_at_10": 0.011550862037039197,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.01652472352866404,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "collaborative": {
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.06445304276314728,
+      "ndcg_at_10": 0.0593864666678308,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.019194101944832846,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "hybrid": {
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.0714993388338336,
+      "ndcg_at_10": 0.06878856778737541,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.019575441718571247,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    }
+  },
+  "selection": "Highest validation NDCG@10 on warm users; final factors refitted on train+validation before test",
+  "validation_trials": [
+    {
+      "alpha": 0,
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.006832738411685781,
+      "ndcg_at_10": 0.011550862037039197,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.01652472352866404,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    {
+      "alpha": 0.25,
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.01182058682058682,
+      "ndcg_at_10": 0.02028953843888006,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.01779585610779204,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    {
+      "alpha": 0.5,
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.021063196063196062,
+      "ndcg_at_10": 0.027870016736239716,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.020083894750222448,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    {
+      "alpha": 0.75,
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.0714993388338336,
+      "ndcg_at_10": 0.06878856778737541,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.019575441718571247,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    {
+      "alpha": 1,
+      "warm_users": 21,
+      "cold_users": 41,
+      "recall_at_10": 0.06445304276314728,
+      "ndcg_at_10": 0.0593864666678308,
+      "cold_recall_at_10": 0.07085317205737084,
+      "cold_ndcg_at_10": 0.4329784814479317,
+      "catalog_coverage": 0.019194101944832846,
+      "future_positive_events": 5198,
+      "future_items_unavailable": 388,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 7867,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    }
+  ],
+  "test": {
+    "popularity": {
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.03789715953362517,
+      "ndcg_at_10": 0.09589640792928521,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.008735150244584208,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "content": {
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.010150708756244999,
+      "ndcg_at_10": 0.04374972881724119,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.013277428371767994,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "collaborative": {
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.05964470695603088,
+      "ndcg_at_10": 0.15714724583893183,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.019799673887724203,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "hybrid": {
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.055248572703468495,
+      "ndcg_at_10": 0.16482420034714024,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.019916142557651992,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    }
+  },
+  "elapsed_seconds": 7.03
+}

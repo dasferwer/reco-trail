@@ -1,0 +1,74 @@
+name: 16-reco-trail
+x-app: &app
+  build:
+    context: .
+    target: runtime
+  environment: &environment
+    DATABASE_URL: postgresql+asyncpg://recotrail:recotrail@database:5432/recotrail
+    JWT_SECRET: ${JWT_SECRET:-local-demo-recotrail-replace-before-deployment}
+    MODEL_DIR: /app/models
+  restart: unless-stopped
+  init: true
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: recotrail
+      POSTGRES_USER: recotrail
+      POSTGRES_PASSWORD: recotrail
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U recotrail -d recotrail"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  migrate:
+    <<: *app
+    command: ["sh", "-c", "alembic upgrade head && python scripts/seed.py"]
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: "no"
+  api:
+    <<: *app
+    ports:
+      - "127.0.0.1:8160:8000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  test-db:
+    image: postgres:17-alpine
+    profiles: ["test"]
+    environment:
+      POSTGRES_DB: recotrail_test
+      POSTGRES_USER: recotrail
+      POSTGRES_PASSWORD: recotrail
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U recotrail -d recotrail_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  test:
+    build:
+      context: .
+      target: test
+    profiles: ["test"]
+    environment:
+      <<: *environment
+      DATABASE_URL: postgresql+asyncpg://recotrail:recotrail@test-db:5432/recotrail_test
+      TESTING: "true"
+    depends_on:
+      test-db:
+        condition: service_healthy
+    init: true
+volumes:
+  postgres_data:

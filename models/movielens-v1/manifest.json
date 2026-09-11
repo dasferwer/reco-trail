@@ -1,0 +1,36 @@
+{
+  "format": 1,
+  "version": "movielens-v1",
+  "alpha": 0.75,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Children",
+    "Comedy",
+    "Crime",
+    "Documentary",
+    "Drama",
+    "Fantasy",
+    "Film-Noir",
+    "Horror",
+    "IMAX",
+    "Musical",
+    "Mystery",
+    "Romance",
+    "Sci-Fi",
+    "Thriller",
+    "War",
+    "Western"
+  ],
+  "fit_rows": 90752,
+  "fit_cutoff_exclusive": 1498029446,
+  "fit_items": 8586,
+  "factors": 32,
+  "seed": 42,
+  "files_sha256": {
+    "catalog.json": "e95d24876c9a5bbfcf88fba67b0937e10ede7f0b724eea06d07f815034e58174",
+    "weights.npz": "1652597d1e6655c22a6a6cc2e28a482713cfa57c1faa717d67be6ed4fd57601d"
+  },
+  "default_algorithm": "hybrid"
+}
