@@ -129,3 +129,5 @@ CLI читает исходный MovieLens, а не события API. A/B-т�
 Авторы: F. Maxwell Harper, Joseph A. Konstan. *The MovieLens Datasets:
 History and Context*, 2015, [DOI](https://doi.org/10.1145/2827872).
 Включены ratings, movies и исходный README; tags и links не используются.
+
+Отдельные размеры warm/cold групп, ошибки пользователей и измерение ранжирования на 10000 позициях описаны в [P2-отчёте](docs/p2-ranking.md). Воспроизведение: `uv run python -m scripts.evaluate_groups`; используется замороженная модель без настройки на test labels. Синтетическое расширение каталога проверяет только ресурсы.

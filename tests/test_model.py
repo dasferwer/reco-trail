@@ -80,3 +80,29 @@ def test_cold_start_and_zero_positive_history_use_popularity(model):
     assert model.rank({1: 0}, model.catalog)["strategy"] == "popularity"
     assert model.rank({}, model.catalog, preferences=["Horror"])["strategy"] == "genre_preferences"
     assert model.rank({}, [])["items"] == []
+
+
+def test_group_report_counts_errors_and_keeps_original_aggregate(model):
+    _, train, validation, test, _ = read_data(ROOT / "data")
+    with threadpool_limits(limits=2):
+        report = evaluate(model, train + validation, test, "hybrid")
+    for group in ["warm", "cold"]:
+        rows = report["groups"][group]
+        assert rows["users"] == report[group + "_users"]
+        assert rows["hits_at_10"] + rows["missed_relevant_items"] == rows["relevant_items"]
+        assert rows["zero_hit_users"] == sum(r["hits"] == 0 for r in rows["per_user"])
+    assert report["groups"]["warm"]["ndcg_at_10"] == report["ndcg_at_10"]
+    assert report["groups"]["cold"]["ndcg_at_10"] == report["cold_ndcg_at_10"]
+
+
+def test_stress_catalog_eligibility_uses_real_ranking(model):
+    from scripts.evaluate_groups import stress_catalog
+
+    items, history = stress_catalog(model)
+    with threadpool_limits(limits=2):
+        result = model.rank(history, items, limit=10000)
+    ids = {row["item_id"] for row in result["items"]}
+    assert len(items) == 10000
+    assert len(ids) == 9800
+    assert ids == {row["id"] for row in items if row["active"] and row["id"] not in history}
+    assert stress_catalog(model) == (items, history)

@@ -131,6 +131,7 @@ def evaluate(model, past, future, algorithm):
     values = []
     recommended = set()
     cold = []
+    groups = {name: [] for name in ("warm", "cold")}
     for user, relevant in sorted(truth.items()):
         profile = history.get(user, {})
         result = model.rank(profile, model.catalog, algorithm=algorithm)
@@ -140,12 +141,35 @@ def evaluate(model, past, future, algorithm):
             cold.append(metric)
         else:
             values.append(metric)
+        group = "warm" if any(weight > 0 for weight in profile.values()) else "cold"
+        groups[group].append(
+            {
+                "user_id": user,
+                "relevant_items": len(relevant),
+                "recommended_items": len(ids),
+                **metric,
+            }
+        )
+        assert not set(ids) & set(profile), "Seen items leaked into evaluation"
         recommended.update(ids)
 
     def average(rows, key):
         return float(np.mean([row[key] for row in rows])) if rows else 0.0
 
     return {
+        "groups": {
+            name: {
+                "users": len(rows),
+                "relevant_items": sum(r["relevant_items"] for r in rows),
+                "hits_at_10": sum(r["hits"] for r in rows),
+                "missed_relevant_items": sum(r["relevant_items"] - r["hits"] for r in rows),
+                "zero_hit_users": sum(r["hits"] == 0 for r in rows),
+                "recall_at_10": average(rows, "recall"),
+                "ndcg_at_10": average(rows, "ndcg"),
+                "per_user": rows,
+            }
+            for name, rows in groups.items()
+        },
         "warm_users": len(values),
         "cold_users": len(cold),
         "recall_at_10": average(values, "recall"),

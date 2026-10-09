@@ -1,0 +1,2520 @@
+{
+  "created_at": "2026-10-09T11:29:23.874071+00:00",
+  "version": "movielens-v1",
+  "manifest_sha256": "545b1eb2ad811e1caa890e9bde0cc2dff39c386983acc0ed72f10b4586c71001",
+  "source": {
+    "name": "MovieLens latest-small",
+    "url": "https://files.grouplens.org/datasets/movielens/ml-latest-small.zip",
+    "downloaded_on": "2026-09-11",
+    "archive_sha256": "696d65a3dfceac7c45750ad32df2c259311949efec81f0f144fdfb91ebc9e436",
+    "files_sha256": {
+      "ratings.csv": "aa289ca83157595d0df6aea1be6a4ded676ddc4385472e8313a8ed9805352646",
+      "movies.csv": "5a5f32dd9bb3797b8e728a1b98958789d2b13f294a69fdfbc5727f8a9611aa07",
+      "README.txt": "63d22ac138e80fae37021797ed8e1b9424b5239dc576a137422adf783ae3f404"
+    }
+  },
+  "protocol": "Frozen original global temporal test; no tuning or refitting on test labels. Warm = positive past rating, cold = no positive past rating; cold can have rejected items.",
+  "split_rows": {
+    "past": 90752,
+    "test": 10084
+  },
+  "test_start": 1498029450,
+  "algorithms": {
+    "popularity": {
+      "groups": {
+        "warm": {
+          "users": 25,
+          "relevant_items": 764,
+          "hits_at_10": 22,
+          "missed_relevant_items": 742,
+          "zero_hit_users": 16,
+          "recall_at_10": 0.03789715953362517,
+          "ndcg_at_10": 0.09589640792928521,
+          "per_user": [
+            {
+              "user_id": 15,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.14,
+              "ndcg": 0.7655934900767002,
+              "hits": 7
+            },
+            {
+              "user_id": 18,
+              "relevant_items": 18,
+              "recommended_items": 10,
+              "recall": 0.05555555555555555,
+              "ndcg": 0.09478836436955078,
+              "hits": 1
+            },
+            {
+              "user_id": 21,
+              "relevant_items": 5,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 68,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 103,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 105,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 112,
+              "relevant_items": 20,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 119,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 125,
+              "relevant_items": 2,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 210,
+              "relevant_items": 67,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 212,
+              "relevant_items": 44,
+              "recommended_items": 10,
+              "recall": 0.045454545454545456,
+              "ndcg": 0.15850703974098102,
+              "hits": 2
+            },
+            {
+              "user_id": 233,
+              "relevant_items": 23,
+              "recommended_items": 10,
+              "recall": 0.08695652173913043,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 249,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0625,
+              "ndcg": 0.09478836436955078,
+              "hits": 1
+            },
+            {
+              "user_id": 282,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 305,
+              "relevant_items": 96,
+              "recommended_items": 10,
+              "recall": 0.020833333333333332,
+              "ndcg": 0.14279514403613733,
+              "hits": 2
+            },
+            {
+              "user_id": 318,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 339,
+              "relevant_items": 7,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 341,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 380,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 414,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.02,
+              "ndcg": 0.06362078819895171,
+              "hits": 1
+            },
+            {
+              "user_id": 443,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.5,
+              "ndcg": 0.6489315753318465,
+              "hits": 5
+            },
+            {
+              "user_id": 462,
+              "relevant_items": 9,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 475,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 511,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 601,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.016129032258064516,
+              "ndcg": 0.06943122193677727,
+              "hits": 1
+            }
+          ]
+        },
+        "cold": {
+          "users": 47,
+          "relevant_items": 2712,
+          "hits_at_10": 165,
+          "missed_relevant_items": 2547,
+          "zero_hit_users": 9,
+          "recall_at_10": 0.09549990123634108,
+          "ndcg_at_10": 0.3942900484657935,
+          "per_user": [
+            {
+              "user_id": 25,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.23297260855707355,
+              "hits": 3
+            },
+            {
+              "user_id": 30,
+              "relevant_items": 31,
+              "recommended_items": 10,
+              "recall": 0.16129032258064516,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 50,
+              "relevant_items": 38,
+              "recommended_items": 10,
+              "recall": 0.02631578947368421,
+              "ndcg": 0.11004588314904008,
+              "hits": 1
+            },
+            {
+              "user_id": 62,
+              "relevant_items": 260,
+              "recommended_items": 10,
+              "recall": 0.038461538461538464,
+              "ndcg": 1.0,
+              "hits": 10
+            },
+            {
+              "user_id": 67,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.2,
+              "ndcg": 0.6203974344166848,
+              "hits": 5
+            },
+            {
+              "user_id": 77,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.22716217481924803,
+              "hits": 3
+            },
+            {
+              "user_id": 89,
+              "relevant_items": 76,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 98,
+              "relevant_items": 57,
+              "recommended_items": 10,
+              "recall": 0.03508771929824561,
+              "ndcg": 0.23365080824310533,
+              "hits": 2
+            },
+            {
+              "user_id": 111,
+              "relevant_items": 209,
+              "recommended_items": 10,
+              "recall": 0.014354066985645933,
+              "ndcg": 0.42520843362602373,
+              "hits": 3
+            },
+            {
+              "user_id": 141,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.08064516129032258,
+              "ndcg": 0.6136525857537393,
+              "hits": 5
+            },
+            {
+              "user_id": 153,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 159,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.04878048780487805,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 184,
+              "relevant_items": 48,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 190,
+              "relevant_items": 40,
+              "recommended_items": 10,
+              "recall": 0.075,
+              "ndcg": 0.3557772116892465,
+              "hits": 3
+            },
+            {
+              "user_id": 205,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.11764705882352941,
+              "ndcg": 0.21726071285222986,
+              "hits": 2
+            },
+            {
+              "user_id": 209,
+              "relevant_items": 28,
+              "recommended_items": 10,
+              "recall": 0.17857142857142858,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 248,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.047619047619047616,
+              "ndcg": 0.08514311764162098,
+              "hits": 1
+            },
+            {
+              "user_id": 252,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 258,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.21052631578947367,
+              "ndcg": 0.4409203293308675,
+              "hits": 4
+            },
+            {
+              "user_id": 272,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.125,
+              "ndcg": 0.30523488393970116,
+              "hits": 2
+            },
+            {
+              "user_id": 279,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.08333333333333333,
+              "ndcg": 0.725452110735279,
+              "hits": 7
+            },
+            {
+              "user_id": 296,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.3684210526315789,
+              "ndcg": 0.7631925784528223,
+              "hits": 7
+            },
+            {
+              "user_id": 306,
+              "relevant_items": 30,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 329,
+              "relevant_items": 8,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 331,
+              "relevant_items": 87,
+              "recommended_items": 10,
+              "recall": 0.04597701149425287,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 338,
+              "relevant_items": 12,
+              "recommended_items": 10,
+              "recall": 0.4166666666666667,
+              "ndcg": 0.5606114592078373,
+              "hits": 5
+            },
+            {
+              "user_id": 362,
+              "relevant_items": 95,
+              "recommended_items": 10,
+              "recall": 0.09473684210526316,
+              "ndcg": 0.9305687780632227,
+              "hits": 9
+            },
+            {
+              "user_id": 363,
+              "relevant_items": 13,
+              "recommended_items": 10,
+              "recall": 0.15384615384615385,
+              "ndcg": 0.33013764944712026,
+              "hits": 2
+            },
+            {
+              "user_id": 382,
+              "relevant_items": 109,
+              "recommended_items": 10,
+              "recall": 0.08256880733944955,
+              "ndcg": 0.9266360779006401,
+              "hits": 9
+            },
+            {
+              "user_id": 400,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.1951219512195122,
+              "ndcg": 0.8572048559638628,
+              "hits": 8
+            },
+            {
+              "user_id": 401,
+              "relevant_items": 22,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 417,
+              "relevant_items": 55,
+              "recommended_items": 10,
+              "recall": 0.10909090909090909,
+              "ndcg": 0.7151857987862356,
+              "hits": 6
+            },
+            {
+              "user_id": 433,
+              "relevant_items": 14,
+              "recommended_items": 10,
+              "recall": 0.2857142857142857,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 459,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.1635413866202963,
+              "hits": 2
+            },
+            {
+              "user_id": 461,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.1875,
+              "ndcg": 0.4537425745411855,
+              "hits": 3
+            },
+            {
+              "user_id": 491,
+              "relevant_items": 53,
+              "recommended_items": 10,
+              "recall": 0.018867924528301886,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 514,
+              "relevant_items": 183,
+              "recommended_items": 10,
+              "recall": 0.03278688524590164,
+              "ndcg": 0.5708588662113935,
+              "hits": 6
+            },
+            {
+              "user_id": 515,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.23809523809523808,
+              "ndcg": 0.5730379245414764,
+              "hits": 5
+            },
+            {
+              "user_id": 519,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 523,
+              "relevant_items": 71,
+              "recommended_items": 10,
+              "recall": 0.056338028169014086,
+              "ndcg": 0.494639655562801,
+              "hits": 4
+            },
+            {
+              "user_id": 526,
+              "relevant_items": 45,
+              "recommended_items": 10,
+              "recall": 0.08888888888888889,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 551,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.05952380952380952,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 556,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 567,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 586,
+              "relevant_items": 166,
+              "recommended_items": 10,
+              "recall": 0.030120481927710843,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 596,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.04065040650406504,
+              "ndcg": 0.39401519638101345,
+              "hits": 5
+            },
+            {
+              "user_id": 599,
+              "relevant_items": 173,
+              "recommended_items": 10,
+              "recall": 0.03468208092485549,
+              "ndcg": 0.6235540477207574,
+              "hits": 6
+            }
+          ]
+        }
+      },
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.03789715953362517,
+      "ndcg_at_10": 0.09589640792928521,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.008735150244584208,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "content": {
+      "groups": {
+        "warm": {
+          "users": 25,
+          "relevant_items": 764,
+          "hits_at_10": 9,
+          "missed_relevant_items": 755,
+          "zero_hit_users": 18,
+          "recall_at_10": 0.010150708756244999,
+          "ndcg_at_10": 0.04374972881724119,
+          "per_user": [
+            {
+              "user_id": 15,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.02,
+              "ndcg": 0.06362078819895171,
+              "hits": 1
+            },
+            {
+              "user_id": 18,
+              "relevant_items": 18,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 21,
+              "relevant_items": 5,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 68,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 103,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 105,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 112,
+              "relevant_items": 20,
+              "recommended_items": 10,
+              "recall": 0.05,
+              "ndcg": 0.09478836436955078,
+              "hits": 1
+            },
+            {
+              "user_id": 119,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 125,
+              "relevant_items": 2,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 210,
+              "relevant_items": 67,
+              "recommended_items": 10,
+              "recall": 0.029850746268656716,
+              "ndcg": 0.1736666713479918,
+              "hits": 2
+            },
+            {
+              "user_id": 212,
+              "relevant_items": 44,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 233,
+              "relevant_items": 23,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 249,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 282,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 305,
+              "relevant_items": 96,
+              "recommended_items": 10,
+              "recall": 0.010416666666666666,
+              "ndcg": 0.07839826897867533,
+              "hits": 1
+            },
+            {
+              "user_id": 318,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 339,
+              "relevant_items": 7,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 341,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 380,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 414,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 443,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 462,
+              "relevant_items": 9,
+              "recommended_items": 10,
+              "recall": 0.1111111111111111,
+              "ndcg": 0.1482972305701491,
+              "hits": 1
+            },
+            {
+              "user_id": 475,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.016260162601626018,
+              "ndcg": 0.31488013066763093,
+              "hits": 2
+            },
+            {
+              "user_id": 511,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 601,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.016129032258064516,
+              "ndcg": 0.22009176629808017,
+              "hits": 1
+            }
+          ]
+        },
+        "cold": {
+          "users": 47,
+          "relevant_items": 2712,
+          "hits_at_10": 165,
+          "missed_relevant_items": 2547,
+          "zero_hit_users": 9,
+          "recall_at_10": 0.09549990123634108,
+          "ndcg_at_10": 0.3942900484657935,
+          "per_user": [
+            {
+              "user_id": 25,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.23297260855707355,
+              "hits": 3
+            },
+            {
+              "user_id": 30,
+              "relevant_items": 31,
+              "recommended_items": 10,
+              "recall": 0.16129032258064516,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 50,
+              "relevant_items": 38,
+              "recommended_items": 10,
+              "recall": 0.02631578947368421,
+              "ndcg": 0.11004588314904008,
+              "hits": 1
+            },
+            {
+              "user_id": 62,
+              "relevant_items": 260,
+              "recommended_items": 10,
+              "recall": 0.038461538461538464,
+              "ndcg": 1.0,
+              "hits": 10
+            },
+            {
+              "user_id": 67,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.2,
+              "ndcg": 0.6203974344166848,
+              "hits": 5
+            },
+            {
+              "user_id": 77,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.22716217481924803,
+              "hits": 3
+            },
+            {
+              "user_id": 89,
+              "relevant_items": 76,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 98,
+              "relevant_items": 57,
+              "recommended_items": 10,
+              "recall": 0.03508771929824561,
+              "ndcg": 0.23365080824310533,
+              "hits": 2
+            },
+            {
+              "user_id": 111,
+              "relevant_items": 209,
+              "recommended_items": 10,
+              "recall": 0.014354066985645933,
+              "ndcg": 0.42520843362602373,
+              "hits": 3
+            },
+            {
+              "user_id": 141,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.08064516129032258,
+              "ndcg": 0.6136525857537393,
+              "hits": 5
+            },
+            {
+              "user_id": 153,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 159,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.04878048780487805,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 184,
+              "relevant_items": 48,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 190,
+              "relevant_items": 40,
+              "recommended_items": 10,
+              "recall": 0.075,
+              "ndcg": 0.3557772116892465,
+              "hits": 3
+            },
+            {
+              "user_id": 205,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.11764705882352941,
+              "ndcg": 0.21726071285222986,
+              "hits": 2
+            },
+            {
+              "user_id": 209,
+              "relevant_items": 28,
+              "recommended_items": 10,
+              "recall": 0.17857142857142858,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 248,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.047619047619047616,
+              "ndcg": 0.08514311764162098,
+              "hits": 1
+            },
+            {
+              "user_id": 252,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 258,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.21052631578947367,
+              "ndcg": 0.4409203293308675,
+              "hits": 4
+            },
+            {
+              "user_id": 272,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.125,
+              "ndcg": 0.30523488393970116,
+              "hits": 2
+            },
+            {
+              "user_id": 279,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.08333333333333333,
+              "ndcg": 0.725452110735279,
+              "hits": 7
+            },
+            {
+              "user_id": 296,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.3684210526315789,
+              "ndcg": 0.7631925784528223,
+              "hits": 7
+            },
+            {
+              "user_id": 306,
+              "relevant_items": 30,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 329,
+              "relevant_items": 8,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 331,
+              "relevant_items": 87,
+              "recommended_items": 10,
+              "recall": 0.04597701149425287,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 338,
+              "relevant_items": 12,
+              "recommended_items": 10,
+              "recall": 0.4166666666666667,
+              "ndcg": 0.5606114592078373,
+              "hits": 5
+            },
+            {
+              "user_id": 362,
+              "relevant_items": 95,
+              "recommended_items": 10,
+              "recall": 0.09473684210526316,
+              "ndcg": 0.9305687780632227,
+              "hits": 9
+            },
+            {
+              "user_id": 363,
+              "relevant_items": 13,
+              "recommended_items": 10,
+              "recall": 0.15384615384615385,
+              "ndcg": 0.33013764944712026,
+              "hits": 2
+            },
+            {
+              "user_id": 382,
+              "relevant_items": 109,
+              "recommended_items": 10,
+              "recall": 0.08256880733944955,
+              "ndcg": 0.9266360779006401,
+              "hits": 9
+            },
+            {
+              "user_id": 400,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.1951219512195122,
+              "ndcg": 0.8572048559638628,
+              "hits": 8
+            },
+            {
+              "user_id": 401,
+              "relevant_items": 22,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 417,
+              "relevant_items": 55,
+              "recommended_items": 10,
+              "recall": 0.10909090909090909,
+              "ndcg": 0.7151857987862356,
+              "hits": 6
+            },
+            {
+              "user_id": 433,
+              "relevant_items": 14,
+              "recommended_items": 10,
+              "recall": 0.2857142857142857,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 459,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.1635413866202963,
+              "hits": 2
+            },
+            {
+              "user_id": 461,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.1875,
+              "ndcg": 0.4537425745411855,
+              "hits": 3
+            },
+            {
+              "user_id": 491,
+              "relevant_items": 53,
+              "recommended_items": 10,
+              "recall": 0.018867924528301886,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 514,
+              "relevant_items": 183,
+              "recommended_items": 10,
+              "recall": 0.03278688524590164,
+              "ndcg": 0.5708588662113935,
+              "hits": 6
+            },
+            {
+              "user_id": 515,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.23809523809523808,
+              "ndcg": 0.5730379245414764,
+              "hits": 5
+            },
+            {
+              "user_id": 519,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 523,
+              "relevant_items": 71,
+              "recommended_items": 10,
+              "recall": 0.056338028169014086,
+              "ndcg": 0.494639655562801,
+              "hits": 4
+            },
+            {
+              "user_id": 526,
+              "relevant_items": 45,
+              "recommended_items": 10,
+              "recall": 0.08888888888888889,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 551,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.05952380952380952,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 556,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 567,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 586,
+              "relevant_items": 166,
+              "recommended_items": 10,
+              "recall": 0.030120481927710843,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 596,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.04065040650406504,
+              "ndcg": 0.39401519638101345,
+              "hits": 5
+            },
+            {
+              "user_id": 599,
+              "relevant_items": 173,
+              "recommended_items": 10,
+              "recall": 0.03468208092485549,
+              "ndcg": 0.6235540477207574,
+              "hits": 6
+            }
+          ]
+        }
+      },
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.010150708756244999,
+      "ndcg_at_10": 0.04374972881724119,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.013277428371767994,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "collaborative": {
+      "groups": {
+        "warm": {
+          "users": 25,
+          "relevant_items": 764,
+          "hits_at_10": 35,
+          "missed_relevant_items": 729,
+          "zero_hit_users": 12,
+          "recall_at_10": 0.05964470695603088,
+          "ndcg_at_10": 0.15714724583893183,
+          "per_user": [
+            {
+              "user_id": 15,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 18,
+              "relevant_items": 18,
+              "recommended_items": 10,
+              "recall": 0.05555555555555555,
+              "ndcg": 0.22009176629808017,
+              "hits": 1
+            },
+            {
+              "user_id": 21,
+              "relevant_items": 5,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 68,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0625,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 103,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.25,
+              "ndcg": 0.123151194370365,
+              "hits": 1
+            },
+            {
+              "user_id": 105,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 112,
+              "relevant_items": 20,
+              "recommended_items": 10,
+              "recall": 0.05,
+              "ndcg": 0.06362078819895171,
+              "hits": 1
+            },
+            {
+              "user_id": 119,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 125,
+              "relevant_items": 2,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 210,
+              "relevant_items": 67,
+              "recommended_items": 10,
+              "recall": 0.05970149253731343,
+              "ndcg": 0.4789015552876929,
+              "hits": 4
+            },
+            {
+              "user_id": 212,
+              "relevant_items": 44,
+              "recommended_items": 10,
+              "recall": 0.06818181818181818,
+              "ndcg": 0.28088150105118154,
+              "hits": 3
+            },
+            {
+              "user_id": 233,
+              "relevant_items": 23,
+              "recommended_items": 10,
+              "recall": 0.21739130434782608,
+              "ndcg": 0.5988751049740155,
+              "hits": 5
+            },
+            {
+              "user_id": 249,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.1875,
+              "ndcg": 0.28323251649726616,
+              "hits": 3
+            },
+            {
+              "user_id": 282,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 305,
+              "relevant_items": 96,
+              "recommended_items": 10,
+              "recall": 0.03125,
+              "ndcg": 0.3187939258847263,
+              "hits": 3
+            },
+            {
+              "user_id": 318,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 339,
+              "relevant_items": 7,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 341,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 380,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 414,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.02,
+              "ndcg": 0.08514311764162098,
+              "hits": 1
+            },
+            {
+              "user_id": 443,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.4,
+              "ndcg": 0.47479014188018454,
+              "hits": 4
+            },
+            {
+              "user_id": 462,
+              "relevant_items": 9,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 475,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.04065040650406504,
+              "ndcg": 0.6325414799409712,
+              "hits": 5
+            },
+            {
+              "user_id": 511,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 601,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.04838709677419355,
+              "ndcg": 0.22979561007468535,
+              "hits": 3
+            }
+          ]
+        },
+        "cold": {
+          "users": 47,
+          "relevant_items": 2712,
+          "hits_at_10": 165,
+          "missed_relevant_items": 2547,
+          "zero_hit_users": 9,
+          "recall_at_10": 0.09549990123634108,
+          "ndcg_at_10": 0.3942900484657935,
+          "per_user": [
+            {
+              "user_id": 25,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.23297260855707355,
+              "hits": 3
+            },
+            {
+              "user_id": 30,
+              "relevant_items": 31,
+              "recommended_items": 10,
+              "recall": 0.16129032258064516,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 50,
+              "relevant_items": 38,
+              "recommended_items": 10,
+              "recall": 0.02631578947368421,
+              "ndcg": 0.11004588314904008,
+              "hits": 1
+            },
+            {
+              "user_id": 62,
+              "relevant_items": 260,
+              "recommended_items": 10,
+              "recall": 0.038461538461538464,
+              "ndcg": 1.0,
+              "hits": 10
+            },
+            {
+              "user_id": 67,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.2,
+              "ndcg": 0.6203974344166848,
+              "hits": 5
+            },
+            {
+              "user_id": 77,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.22716217481924803,
+              "hits": 3
+            },
+            {
+              "user_id": 89,
+              "relevant_items": 76,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 98,
+              "relevant_items": 57,
+              "recommended_items": 10,
+              "recall": 0.03508771929824561,
+              "ndcg": 0.23365080824310533,
+              "hits": 2
+            },
+            {
+              "user_id": 111,
+              "relevant_items": 209,
+              "recommended_items": 10,
+              "recall": 0.014354066985645933,
+              "ndcg": 0.42520843362602373,
+              "hits": 3
+            },
+            {
+              "user_id": 141,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.08064516129032258,
+              "ndcg": 0.6136525857537393,
+              "hits": 5
+            },
+            {
+              "user_id": 153,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 159,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.04878048780487805,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 184,
+              "relevant_items": 48,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 190,
+              "relevant_items": 40,
+              "recommended_items": 10,
+              "recall": 0.075,
+              "ndcg": 0.3557772116892465,
+              "hits": 3
+            },
+            {
+              "user_id": 205,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.11764705882352941,
+              "ndcg": 0.21726071285222986,
+              "hits": 2
+            },
+            {
+              "user_id": 209,
+              "relevant_items": 28,
+              "recommended_items": 10,
+              "recall": 0.17857142857142858,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 248,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.047619047619047616,
+              "ndcg": 0.08514311764162098,
+              "hits": 1
+            },
+            {
+              "user_id": 252,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 258,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.21052631578947367,
+              "ndcg": 0.4409203293308675,
+              "hits": 4
+            },
+            {
+              "user_id": 272,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.125,
+              "ndcg": 0.30523488393970116,
+              "hits": 2
+            },
+            {
+              "user_id": 279,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.08333333333333333,
+              "ndcg": 0.725452110735279,
+              "hits": 7
+            },
+            {
+              "user_id": 296,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.3684210526315789,
+              "ndcg": 0.7631925784528223,
+              "hits": 7
+            },
+            {
+              "user_id": 306,
+              "relevant_items": 30,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 329,
+              "relevant_items": 8,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 331,
+              "relevant_items": 87,
+              "recommended_items": 10,
+              "recall": 0.04597701149425287,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 338,
+              "relevant_items": 12,
+              "recommended_items": 10,
+              "recall": 0.4166666666666667,
+              "ndcg": 0.5606114592078373,
+              "hits": 5
+            },
+            {
+              "user_id": 362,
+              "relevant_items": 95,
+              "recommended_items": 10,
+              "recall": 0.09473684210526316,
+              "ndcg": 0.9305687780632227,
+              "hits": 9
+            },
+            {
+              "user_id": 363,
+              "relevant_items": 13,
+              "recommended_items": 10,
+              "recall": 0.15384615384615385,
+              "ndcg": 0.33013764944712026,
+              "hits": 2
+            },
+            {
+              "user_id": 382,
+              "relevant_items": 109,
+              "recommended_items": 10,
+              "recall": 0.08256880733944955,
+              "ndcg": 0.9266360779006401,
+              "hits": 9
+            },
+            {
+              "user_id": 400,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.1951219512195122,
+              "ndcg": 0.8572048559638628,
+              "hits": 8
+            },
+            {
+              "user_id": 401,
+              "relevant_items": 22,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 417,
+              "relevant_items": 55,
+              "recommended_items": 10,
+              "recall": 0.10909090909090909,
+              "ndcg": 0.7151857987862356,
+              "hits": 6
+            },
+            {
+              "user_id": 433,
+              "relevant_items": 14,
+              "recommended_items": 10,
+              "recall": 0.2857142857142857,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 459,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.1635413866202963,
+              "hits": 2
+            },
+            {
+              "user_id": 461,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.1875,
+              "ndcg": 0.4537425745411855,
+              "hits": 3
+            },
+            {
+              "user_id": 491,
+              "relevant_items": 53,
+              "recommended_items": 10,
+              "recall": 0.018867924528301886,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 514,
+              "relevant_items": 183,
+              "recommended_items": 10,
+              "recall": 0.03278688524590164,
+              "ndcg": 0.5708588662113935,
+              "hits": 6
+            },
+            {
+              "user_id": 515,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.23809523809523808,
+              "ndcg": 0.5730379245414764,
+              "hits": 5
+            },
+            {
+              "user_id": 519,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 523,
+              "relevant_items": 71,
+              "recommended_items": 10,
+              "recall": 0.056338028169014086,
+              "ndcg": 0.494639655562801,
+              "hits": 4
+            },
+            {
+              "user_id": 526,
+              "relevant_items": 45,
+              "recommended_items": 10,
+              "recall": 0.08888888888888889,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 551,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.05952380952380952,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 556,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 567,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 586,
+              "relevant_items": 166,
+              "recommended_items": 10,
+              "recall": 0.030120481927710843,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 596,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.04065040650406504,
+              "ndcg": 0.39401519638101345,
+              "hits": 5
+            },
+            {
+              "user_id": 599,
+              "relevant_items": 173,
+              "recommended_items": 10,
+              "recall": 0.03468208092485549,
+              "ndcg": 0.6235540477207574,
+              "hits": 6
+            }
+          ]
+        }
+      },
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.05964470695603088,
+      "ndcg_at_10": 0.15714724583893183,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.019799673887724203,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    },
+    "hybrid": {
+      "groups": {
+        "warm": {
+          "users": 25,
+          "relevant_items": 764,
+          "hits_at_10": 38,
+          "missed_relevant_items": 726,
+          "zero_hit_users": 12,
+          "recall_at_10": 0.055248572703468495,
+          "ndcg_at_10": 0.16482420034714024,
+          "per_user": [
+            {
+              "user_id": 15,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 18,
+              "relevant_items": 18,
+              "recommended_items": 10,
+              "recall": 0.05555555555555555,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 21,
+              "relevant_items": 5,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 68,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0625,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 103,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.25,
+              "ndcg": 0.15101961822780524,
+              "hits": 1
+            },
+            {
+              "user_id": 105,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 112,
+              "relevant_items": 20,
+              "recommended_items": 10,
+              "recall": 0.05,
+              "ndcg": 0.06943122193677727,
+              "hits": 1
+            },
+            {
+              "user_id": 119,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 125,
+              "relevant_items": 2,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 210,
+              "relevant_items": 67,
+              "recommended_items": 10,
+              "recall": 0.1044776119402985,
+              "ndcg": 0.6563033086078546,
+              "hits": 7
+            },
+            {
+              "user_id": 212,
+              "relevant_items": 44,
+              "recommended_items": 10,
+              "recall": 0.045454545454545456,
+              "ndcg": 0.15457433957839825,
+              "hits": 2
+            },
+            {
+              "user_id": 233,
+              "relevant_items": 23,
+              "recommended_items": 10,
+              "recall": 0.21739130434782608,
+              "ndcg": 0.5958595188912912,
+              "hits": 5
+            },
+            {
+              "user_id": 249,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.125,
+              "ndcg": 0.19518900079066107,
+              "hits": 2
+            },
+            {
+              "user_id": 282,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 305,
+              "relevant_items": 96,
+              "recommended_items": 10,
+              "recall": 0.041666666666666664,
+              "ndcg": 0.4729327934832575,
+              "hits": 4
+            },
+            {
+              "user_id": 318,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 339,
+              "relevant_items": 7,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 341,
+              "relevant_items": 4,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 380,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 414,
+              "relevant_items": 50,
+              "recommended_items": 10,
+              "recall": 0.04,
+              "ndcg": 0.1635413866202963,
+              "hits": 2
+            },
+            {
+              "user_id": 443,
+              "relevant_items": 10,
+              "recommended_items": 10,
+              "recall": 0.3,
+              "ndcg": 0.424926013816671,
+              "hits": 3
+            },
+            {
+              "user_id": 462,
+              "relevant_items": 9,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 475,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.056910569105691054,
+              "ndcg": 0.800693766409882,
+              "hits": 7
+            },
+            {
+              "user_id": 511,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 601,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.03225806451612903,
+              "ndcg": 0.1584091525685025,
+              "hits": 2
+            }
+          ]
+        },
+        "cold": {
+          "users": 47,
+          "relevant_items": 2712,
+          "hits_at_10": 165,
+          "missed_relevant_items": 2547,
+          "zero_hit_users": 9,
+          "recall_at_10": 0.09549990123634108,
+          "ndcg_at_10": 0.3942900484657935,
+          "per_user": [
+            {
+              "user_id": 25,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.23297260855707355,
+              "hits": 3
+            },
+            {
+              "user_id": 30,
+              "relevant_items": 31,
+              "recommended_items": 10,
+              "recall": 0.16129032258064516,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 50,
+              "relevant_items": 38,
+              "recommended_items": 10,
+              "recall": 0.02631578947368421,
+              "ndcg": 0.11004588314904008,
+              "hits": 1
+            },
+            {
+              "user_id": 62,
+              "relevant_items": 260,
+              "recommended_items": 10,
+              "recall": 0.038461538461538464,
+              "ndcg": 1.0,
+              "hits": 10
+            },
+            {
+              "user_id": 67,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.2,
+              "ndcg": 0.6203974344166848,
+              "hits": 5
+            },
+            {
+              "user_id": 77,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.15789473684210525,
+              "ndcg": 0.22716217481924803,
+              "hits": 3
+            },
+            {
+              "user_id": 89,
+              "relevant_items": 76,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 98,
+              "relevant_items": 57,
+              "recommended_items": 10,
+              "recall": 0.03508771929824561,
+              "ndcg": 0.23365080824310533,
+              "hits": 2
+            },
+            {
+              "user_id": 111,
+              "relevant_items": 209,
+              "recommended_items": 10,
+              "recall": 0.014354066985645933,
+              "ndcg": 0.42520843362602373,
+              "hits": 3
+            },
+            {
+              "user_id": 141,
+              "relevant_items": 62,
+              "recommended_items": 10,
+              "recall": 0.08064516129032258,
+              "ndcg": 0.6136525857537393,
+              "hits": 5
+            },
+            {
+              "user_id": 153,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 159,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.04878048780487805,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 184,
+              "relevant_items": 48,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 190,
+              "relevant_items": 40,
+              "recommended_items": 10,
+              "recall": 0.075,
+              "ndcg": 0.3557772116892465,
+              "hits": 3
+            },
+            {
+              "user_id": 205,
+              "relevant_items": 17,
+              "recommended_items": 10,
+              "recall": 0.11764705882352941,
+              "ndcg": 0.21726071285222986,
+              "hits": 2
+            },
+            {
+              "user_id": 209,
+              "relevant_items": 28,
+              "recommended_items": 10,
+              "recall": 0.17857142857142858,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 248,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.047619047619047616,
+              "ndcg": 0.08514311764162098,
+              "hits": 1
+            },
+            {
+              "user_id": 252,
+              "relevant_items": 29,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 258,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.21052631578947367,
+              "ndcg": 0.4409203293308675,
+              "hits": 4
+            },
+            {
+              "user_id": 272,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.125,
+              "ndcg": 0.30523488393970116,
+              "hits": 2
+            },
+            {
+              "user_id": 279,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.08333333333333333,
+              "ndcg": 0.725452110735279,
+              "hits": 7
+            },
+            {
+              "user_id": 296,
+              "relevant_items": 19,
+              "recommended_items": 10,
+              "recall": 0.3684210526315789,
+              "ndcg": 0.7631925784528223,
+              "hits": 7
+            },
+            {
+              "user_id": 306,
+              "relevant_items": 30,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 329,
+              "relevant_items": 8,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 331,
+              "relevant_items": 87,
+              "recommended_items": 10,
+              "recall": 0.04597701149425287,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 338,
+              "relevant_items": 12,
+              "recommended_items": 10,
+              "recall": 0.4166666666666667,
+              "ndcg": 0.5606114592078373,
+              "hits": 5
+            },
+            {
+              "user_id": 362,
+              "relevant_items": 95,
+              "recommended_items": 10,
+              "recall": 0.09473684210526316,
+              "ndcg": 0.9305687780632227,
+              "hits": 9
+            },
+            {
+              "user_id": 363,
+              "relevant_items": 13,
+              "recommended_items": 10,
+              "recall": 0.15384615384615385,
+              "ndcg": 0.33013764944712026,
+              "hits": 2
+            },
+            {
+              "user_id": 382,
+              "relevant_items": 109,
+              "recommended_items": 10,
+              "recall": 0.08256880733944955,
+              "ndcg": 0.9266360779006401,
+              "hits": 9
+            },
+            {
+              "user_id": 400,
+              "relevant_items": 41,
+              "recommended_items": 10,
+              "recall": 0.1951219512195122,
+              "ndcg": 0.8572048559638628,
+              "hits": 8
+            },
+            {
+              "user_id": 401,
+              "relevant_items": 22,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 417,
+              "relevant_items": 55,
+              "recommended_items": 10,
+              "recall": 0.10909090909090909,
+              "ndcg": 0.7151857987862356,
+              "hits": 6
+            },
+            {
+              "user_id": 433,
+              "relevant_items": 14,
+              "recommended_items": 10,
+              "recall": 0.2857142857142857,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 459,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.1635413866202963,
+              "hits": 2
+            },
+            {
+              "user_id": 461,
+              "relevant_items": 16,
+              "recommended_items": 10,
+              "recall": 0.1875,
+              "ndcg": 0.4537425745411855,
+              "hits": 3
+            },
+            {
+              "user_id": 491,
+              "relevant_items": 53,
+              "recommended_items": 10,
+              "recall": 0.018867924528301886,
+              "ndcg": 0.13886244387355454,
+              "hits": 1
+            },
+            {
+              "user_id": 514,
+              "relevant_items": 183,
+              "recommended_items": 10,
+              "recall": 0.03278688524590164,
+              "ndcg": 0.5708588662113935,
+              "hits": 6
+            },
+            {
+              "user_id": 515,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.23809523809523808,
+              "ndcg": 0.5730379245414764,
+              "hits": 5
+            },
+            {
+              "user_id": 519,
+              "relevant_items": 21,
+              "recommended_items": 10,
+              "recall": 0.09523809523809523,
+              "ndcg": 0.3589542101716347,
+              "hits": 2
+            },
+            {
+              "user_id": 523,
+              "relevant_items": 71,
+              "recommended_items": 10,
+              "recall": 0.056338028169014086,
+              "ndcg": 0.494639655562801,
+              "hits": 4
+            },
+            {
+              "user_id": 526,
+              "relevant_items": 45,
+              "recommended_items": 10,
+              "recall": 0.08888888888888889,
+              "ndcg": 0.49118023727106,
+              "hits": 4
+            },
+            {
+              "user_id": 551,
+              "relevant_items": 84,
+              "recommended_items": 10,
+              "recall": 0.05952380952380952,
+              "ndcg": 0.6051399156371955,
+              "hits": 5
+            },
+            {
+              "user_id": 556,
+              "relevant_items": 25,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 567,
+              "relevant_items": 33,
+              "recommended_items": 10,
+              "recall": 0.0,
+              "ndcg": 0.0,
+              "hits": 0
+            },
+            {
+              "user_id": 586,
+              "relevant_items": 166,
+              "recommended_items": 10,
+              "recall": 0.030120481927710843,
+              "ndcg": 0.5206178632166882,
+              "hits": 5
+            },
+            {
+              "user_id": 596,
+              "relevant_items": 123,
+              "recommended_items": 10,
+              "recall": 0.04065040650406504,
+              "ndcg": 0.39401519638101345,
+              "hits": 5
+            },
+            {
+              "user_id": 599,
+              "relevant_items": 173,
+              "recommended_items": 10,
+              "recall": 0.03468208092485549,
+              "ndcg": 0.6235540477207574,
+              "hits": 6
+            }
+          ]
+        }
+      },
+      "warm_users": 25,
+      "cold_users": 47,
+      "recall_at_10": 0.055248572703468495,
+      "ndcg_at_10": 0.16482420034714024,
+      "cold_recall_at_10": 0.09549990123634108,
+      "cold_ndcg_at_10": 0.3942900484657935,
+      "catalog_coverage": 0.019916142557651992,
+      "future_positive_events": 4128,
+      "future_items_unavailable": 652,
+      "future_already_seen": 0,
+      "candidate_catalog_size": 8586,
+      "candidate_protocol": "Full known catalog; every previously rated item excluded; no sampled negatives"
+    }
+  },
+  "environment": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "logical_cpus": 12,
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 2,
+        "prefix": "libomp",
+        "filepath": "/Users/mac/Documents/Codex/portfolio-p2-2026-10-09/worktrees/16-reco-trail/.venv/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib",
+        "version": null
+      }
+    ]
+  },
+  "benchmark": {
+    "seed": 216,
+    "catalog_size": 10000,
+    "real_model_items": 8586,
+    "synthetic_untrained_items": 1414,
+    "seen_items": 100,
+    "inactive_items": 100,
+    "eligible_items": 9800,
+    "top_k": 10,
+    "algorithm": "hybrid",
+    "strategy": "hybrid",
+    "warmup": 5,
+    "repetitions": 100,
+    "concurrency": 1,
+    "p50_ms": 10.178645999985747,
+    "p95_ms": 13.137960099265907,
+    "max_ms": 24.45449998776894,
+    "cpu_seconds": 1.0433049999999993,
+    "ranking_tracemalloc_peak_bytes": 5840712,
+    "process_lifetime_peak_rss_bytes": 194478080,
+    "scope": "In-process Model.rank; excludes HTTP, DB, model load and cache; synthetic extension has no trained factors",
+    "invariants": "Full ranking equals all 9800 eligible IDs; seen/inactive absent; all top10 repeats identical"
+  }
+}
